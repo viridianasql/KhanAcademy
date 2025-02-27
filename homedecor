@@ -1,25 +1,29 @@
 CREATE TABLE homedecor (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, category TEXT, quantity INTEGER);
 
-INSERT INTO homedecor VALUES (1, "Lamp", 10, Bedroom, 5);
-INSERT INTO homedecor VALUES (2, "Bed Sheets", 15, Bedroom, 4);
-INSERT INTO homedecor VALUES (3, "Desk", 20, Home Office, 2);
-INSERT INTO homedecor VALUES (4, "Chair", 10, Home Office, 5);
-INSERT INTO homedecor VALUES (5, "Accent Rug", 15, Living Room, 3);
-INSERT INTO homedecor VALUES (6, "Bath Towel", 5, Bathroom, 4);
-INSERT INTO homedecor VALUES (7, "Coffee Table", 30, Living Room, 1);
-INSERT INTO homedecor VALUES (8, "Reading Chair", 25, Bedroom, 2);
-INSERT INTO homedecor VALUES (9, "Mirror", 45, Living Room, 2);
-INSERT INTO homedecor VALUES (10, "Comforter Set", 30, Bedroom, 4);
-INSERT INTO homedecor VALUES (11, "Bedside Table", 35, Bedroom, 2);
-INSERT INTO homedecor VALUES (12, "Shower Curtain", 10, Bathroom, 5);
-INSERT INTO homedecor VALUES (13, "Throw Blanket", 25, Living Room, 3);
-INSERT INTO homedecor VALUES (14, "Bath Robe", 15, Bedroom, 1);
-INSERT INTO homedecor VALUES (15, "Cushion", 10, Living Room, 4);
+INSERT INTO homedecor VALUES (1, "Lamp", 10, "Bedroom", 5);
+INSERT INTO homedecor VALUES (2, "Bed Sheets", 15, "Bedroom", 4);
+INSERT INTO homedecor VALUES (3, "Desk", 20, "Home Office", 2);
+INSERT INTO homedecor VALUES (4, "Picture Frame", 10, "Living Room", 5);
+INSERT INTO homedecor VALUES (5, "Accent Rug", 15, "Living Room", 3);
+INSERT INTO homedecor VALUES (6, "Bath towel", 5, "Bathroom", 4);
+INSERT INTO homedecor VALUES (7, "Coffee Table", 30, "Living Room", 2);
+INSERT INTO homedecor VALUES (8, "Reading Chair", 30, "Bedroom", 3);
+INSERT INTO homedecor VALUES (9, "Mirror", 45, "Living Room", 2);
+INSERT INTO homedecor VALUES (10, "Comforter Set", 30, "Bedroom", 4);
+INSERT INTO homedecor VALUES (11, "Bedside Table", 35, "Bedroom", 2);
+INSERT INTO homedecor VALUES (12, "Shower Curtain", 10, "Bathroom", 5);
+INSERT INTO homedecor VALUES (13, "Throw Blanket", 25, "Living Room", 5);
+INSERT INTO homedecor VALUES (14, "Bath Robe", 15, "Bedroom", 1);
+INSERT INTO homedecor VALUES (15, "Decorative Pillow", 10, "Living Room", 8);
 
 SELECT * FROM homedecor;
 
-SELECT item FROM homedecor WHERE price >20;
+SELECT SUM(quantity) FROM homedecor;
 
-SELECT SUM(price) FROM homedecor;
-SELECT * FROM homedecor;
-SELECT * FROM homedecor;
+SELECT item,price FROM homedecor ORDER BY price;
+
+SELECT item, MAX(quantity) FROM homedecor;
+
+SELECT item, MIN(quantity) FROM homedecor;
+
+
